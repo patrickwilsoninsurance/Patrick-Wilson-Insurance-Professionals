@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10243a">
+<meta name="description" content="Contact Patrick Wilson Insurance for home and auto insurance quote requests and policy service.">
+<title>Patrick Wilson Insurance</title>
+<style>
+:root{--navy:#10243a;--navy2:#183650;--gold:#e6c77a;--cream:#fbf8f0;--ink:#172638;--muted:#627184;--line:#e3e8ee;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f7fa;color:var(--ink);line-height:1.5}
+a{color:inherit}button,input,select,textarea{font:inherit}button,a.btn{cursor:pointer;text-decoration:none}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:10;border-bottom:1px solid #294257}
+.nav{max-width:1080px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;gap:10px;align-items:center;text-decoration:none}.shield{width:42px;height:42px;border:2px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-size:23px;font-weight:800}
+.brand strong{display:block;letter-spacing:.08em;font-size:14px}.brand small{color:var(--gold);letter-spacing:.18em;font-weight:700}
+.navlinks{display:flex;align-items:center;gap:18px;font-size:14px}.navlinks a{text-decoration:none;color:#edf2f7}.navlinks a:hover{color:var(--gold)}
+.wrap{max-width:1080px;margin:auto;padding:0 20px}
+.hero{background:linear-gradient(125deg,#10243a 0%,#183650 70%,#244660 100%);color:white;overflow:hidden}
+.hero-inner{max-width:1080px;margin:auto;padding:58px 20px 54px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.eyebrow{color:var(--gold);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.04;letter-spacing:-.04em;margin:12px 0 18px;max-width:600px}
+.hero p{font-size:18px;color:#e0e7ee;max-width:540px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 18px;font-weight:800;transition:transform .15s,filter .15s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.03)}.primary{background:var(--gold);color:var(--navy)}.outline{border:1px solid #d4dfeb;color:white;background:transparent}.darkbtn{background:var(--navy);color:white}.lightbtn{background:white;color:var(--navy);border:1px solid var(--line)}
+.hero-card{background:#fff;color:var(--ink);border-radius:24px;padding:25px;box-shadow:0 20px 55px #06152555;transform:rotate(1deg)}
+.hero-card h2{margin:0 0 6px;font-size:22px}.hero-card p{font-size:14px;color:var(--muted);margin:0 0 18px}
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quick{background:var(--cream);border:1px solid #eee5cf;border-radius:16px;padding:16px;text-decoration:none;display:block}.quick span{font-size:26px}.quick strong{display:block;margin-top:6px}.quick small{color:var(--muted)}
+.section{padding:55px 0}.section-head{text-align:center;max-width:660px;margin:0 auto 28px}.section-head h2{font-size:clamp(27px,3vw,36px);line-height:1.15;margin:8px 0}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 6px 18px #10243a08}.card .ico{width:45px;height:45px;display:grid;place-items:center;background:#f7efd9;border-radius:13px;font-size:23px}.card h3{margin:14px 0 6px}.card p{color:var(--muted);font-size:14px}.card a{font-weight:800;color:#183650}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:25px}.panel h2{margin:0 0 8px}.sub{color:var(--muted);margin-top:0}
+form{display:grid;gap:14px}label{font-weight:700;font-size:13px;display:block;margin-bottom:6px}.field{width:100%;border:1px solid #cfd8e2;background:#fff;border-radius:10px;padding:12px 13px;color:var(--ink);min-height:45px}.field:focus{outline:3px solid #e6c77a66;border-color:#b28d35}textarea.field{min-height:90px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.consent{display:flex;align-items:flex-start;gap:9px;font-weight:500;color:var(--muted);font-size:12px}.consent input{margin-top:4px}.notice{font-size:12px;color:var(--muted);background:#f5f7fa;padding:11px 12px;border-radius:10px}
+.formstatus{display:none;border-radius:10px;padding:12px;background:#eaf6ee;color:#1c6533;font-size:14px}.formstatus.show{display:block}
+.faqs{max-width:800px;margin:auto;display:grid;gap:10px}.faq{background:white;border:1px solid var(--line);border-radius:13px;overflow:hidden}.faq button{width:100%;padding:17px 18px;background:white;border:0;text-align:left;display:flex;justify-content:space-between;gap:12px;font-weight:800;color:var(--ink)}.faq .answer{display:none;padding:0 18px 18px;color:var(--muted);font-size:14px}.faq.open .answer{display:block}.faq button span:last-child{color:#9a7828;font-size:20px}
+.referral{background:var(--navy);color:white;border-radius:22px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px}.referral p{color:#dce5ee;margin-bottom:0}.referral h2{margin:0 0 7px}
+footer{background:#0b1b2b;color:#d7e0e8;padding:28px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot a{color:var(--gold)}.disclaimer{font-size:12px;color:#aebdcb;max-width:780px;margin-top:15px}
+.mobilebar{display:none}
+@media(max-width:760px){.navlinks{display:none}.hero-inner{grid-template-columns:1fr;padding-top:42px}.hero-card{transform:none}.cards{grid-template-columns:1fr}.split{grid-template-columns:1fr}.section{padding:42px 0}.referral{display:block}.referral .btn{margin-top:16px;width:100%}.mobilebar{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);padding:9px 12px;gap:9px;z-index:20;box-shadow:0 -5px 22px #10243a12}.mobilebar .btn{flex:1;padding:12px 8px;font-size:13px}footer{padding-bottom:86px}.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="Patrick Wilson Insurance home">
+      <span class="shield">P</span><span><strong>PATRICK WILSON</strong><small>INSURANCE</small></span>
+    </a>
+    <div class="navlinks"><a href="#coverage">Coverage</a><a href="#quote">Get a quote</a><a href="#service">Customer service</a><a href="#faq">FAQs</a></div>
+    <a class="btn primary" href="tel:+14793053739">Call Patrick</a>
+  </nav>
+</header>
+<main id="top">
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Personal service. Practical protection.</div>
+      <h1>Protection for what matters most.</h1>
+      <p>Explore home and auto insurance options, request a quote, or get in touch with Patrick for help with an existing policy.</p>
+      <div class="actions"><a class="btn primary" href="#quote">Request a quote <span aria-hidden="true">→</span></a><a class="btn outline" href="#service">Existing customer</a></div>
+      <p style="font-size:13px;margin-top:20px">Call or text: <a href="sms:+14793053739" style="color:var(--gold);font-weight:800">479-305-3739</a></p>
+    </div>
+    <div class="hero-card">
+      <h2>How can we help?</h2><p>Choose a starting point. Patrick can follow up with you directly.</p>
+      <div class="quick-grid">
+        <a class="quick" href="#quote" data-product="Home"><span>🏡</span><strong>Home insurance</strong><small>Start a quote request</small></a>
+        <a class="quick" href="#quote" data-product="Auto"><span>🚗</span><strong>Auto insurance</strong><small>Start a quote request</small></a>
+        <a class="quick" href="#service"><span>🤝</span><strong>Policy support</strong><small>Request assistance</small></a>
+        <a class="quick" href="#referral"><span>💛</span><strong>Refer a friend</strong><small>Share Patrick's contact</small></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="coverage">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Insurance made personal</div><h2>Help protect your home and the road ahead.</h2><p>Start a conversation about your needs. A quote request is not a policy, binder, or guarantee of coverage.</p></div>
+    <div class="cards">
+      <article class="card"><div class="ico">🏡</div><h3>Home insurance</h3><p>Ask about options for protecting your home and belongings. Patrick can discuss the next steps for a quote.</p><a href="#quote" data-product="Home">Request a home quote →</a></article>
+      <article class="card"><div class="ico">🚘</div><h3>Auto insurance</h3><p>Reach out to discuss coverage for your vehicle and how to begin the quote process.</p><a href="#quote" data-product="Auto">Request an auto quote →</a></article>
+      <article class="card"><div class="ico">💬</div><h3>Personal assistance</h3><p>Have a question about an existing policy? Send a callback request without entering policy or identity numbers.</p><a href="#service">Request a callback →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#edf1f5" id="quote">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">New business</div><h2>Request a quote</h2><p>Share only basic contact details. This demo opens a text message on your device; it does not save or transmit form data to a server.</p></div>
+    <div class="split">
+      <div class="panel">
+        <h2>Let's get started</h2><p class="sub">Choose home, auto, or both.</p>
+        <form id="quoteForm">
+          <div><label for="qtype">What are you interested in?</label><select class="field" id="qtype" required><option value="Home insurance">Home insurance</option><option value="Auto insurance">Auto insurance</option><option value="Home and auto insurance">Home and auto insurance</option></select></div>
+          <div class="two"><div><label for="qname">Your name</label><input class="field" id="qname" maxlength="80" autocomplete="name" required placeholder="First and last name"></div><div><label for="qphone">Phone number</label><input class="field" id="qphone" type="tel" maxlength="25" autocomplete="tel" required placeholder="Best number to reach you"></div></div>
+          <div><label for="qcontact">Preferred contact method</label><select class="field" id="qcontact"><option>Call</option><option>Text</option><option>Email (please share by phone)</option></select></div>
+          <div><label for="qtime">Best time to reach you (optional)</label><select class="field" id="qtime"><option>Any reasonable time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+          <label class="consent"><input id="qconsent" type="checkbox" required><span>I agree that Patrick Wilson Insurance may contact me about this request using the method selected above. Consent is not a condition of purchasing insurance.</span></label>
+          <div class="notice">Please do not enter Social Security numbers, driver's license numbers, dates of birth, payment details, policy numbers, or other sensitive information.</div>
+          <button class="btn darkbtn" type="submit">Prepare quote request text</button>
+          <div class="formstatus" id="qstatus" role="status"></div>
+        </form>
+      </div>
+      <div class="panel">
+        <h2>What happens next?</h2>
+        <p class="sub">A simple, personal process.</p>
+        <ol style="padding-left:20px;display:grid;gap:13px"><li><strong>Send your request.</strong><br><span class="sub">Your device opens a prefilled text to Patrick for you to review.</span></li><li><strong>Patrick follows up.</strong><br><span class="sub">He can ask any additional questions through an appropriate channel.</span></li><li><strong>Discuss available options.</strong><br><span class="sub">Coverage, eligibility, and pricing depend on underwriting and the insurer.</span></li></ol>
+        <a class="btn lightbtn" style="width:100%;margin-top:8px" href="tel:+14793053739">Prefer to call? 479-305-3739</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="service">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Already a customer?</div><h2>We're here to help.</h2><p>Request a callback about a general service need. Do not include private policy details in this form.</p></div>
+    <div class="split">
+      <div class="panel">
+        <h2>Request customer service</h2>
+        <form id="serviceForm">
+          <div><label for="sname">Your name</label><input class="field" id="sname" maxlength="80" required autocomplete="name" placeholder="Your name"></div>
+          <div><label for="sphone">Phone number</label><input class="field" id="sphone" type="tel" maxlength="25" required autocomplete="tel" placeholder="Best callback number"></div>
+          <div><label for="sreason">How can Patrick help?</label><select class="field" id="sreason"><option>General policy question</option><option>Billing question</option><option>Coverage question</option><option>Policy change request</option><option>Renewal question</option><option>Other service question</option></select></div>
+          <div><label for="scontact">Preferred contact</label><select class="field" id="scontact"><option>Call</option><option>Text</option></select></div>
+          <label class="consent"><input id="sconsent" type="checkbox" required><span>I agree that Patrick Wilson Insurance may contact me about this service request. Consent is not a condition of purchasing insurance.</span></label>
+          <div class="notice">For security, this form does not process policy changes or claims. Patrick may direct you to the insurer's secure service channel.</div>
+          <button class="btn darkbtn" type="submit">Prepare callback request text</button><div class="formstatus" id="sstatus" role="status"></div>
+        </form>
+      </div>
+      <div class="panel">
+        <h2>Need help right now?</h2><p class="sub">Use your preferred contact option.</p>
+        <a class="btn darkbtn" style="width:100%;margin-bottom:10px" href="tel:+14793053739">☎ Call Patrick</a>
+        <a class="btn lightbtn" style="width:100%" href="sms:+14793053739">✉ Text Patrick</a>
+        <p class="notice" style="margin-top:18px">If you need to report a claim or make a time-sensitive policy change, use the insurer's official contact information or secure customer portal where applicable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="background:#edf1f5">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">Good to know</div><h2>Frequently asked questions</h2><p>Helpful starting points before you reach out.</p></div>
+    <div class="faqs">
+      <div class="faq"><button type="button" aria-expanded="false">Is a quote request a guarantee of coverage? <span>+</span></button><div class="answer">No. A request is only the beginning of a conversation. Any quote, eligibility decision, binding, and coverage terms are subject to the insurer's requirements and confirmation.</div></div>
+      <div class="faq"><button type="button" aria-expanded="false">What information should I submit here? <span>+</span></button><div class="answer">Only your name, phone number, general interest, preferred contact method, and a convenient time to reach you. Do not submit Social Security numbers, driver's license details, dates of birth, payment information, or policy numbers.</div></div>
+      <div class="faq"><button type="button" aria-expanded="false">Can existing customers request a policy change here? <span>+</span></button><div class="answer">You can request a callback, but this website does not make changes to policies or process claims. Patrick may guide you to a secure insurer channel for those requests.</div></div>
+      <div class="faq"><button type="button" aria-expanded="false">Does submitting a form send it automatically? <span>+</span></button><div class="answer">No. In this prototype, the form prepares a text message in your device's messaging app. Review it and press Send yourself. If messaging is unavailable, call Patrick directly.</div></div>
+      <div class="faq"><button type="button" aria-expanded="false">Does this website store my information? <span>+</span></button><div class="answer">This static prototype does not store form submissions or send them to a server. The information appears in the prefilled text message on your device after you choose to continue.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="referral">
+  <div class="wrap">
+    <div class="referral"><div><div class="eyebrow">Know someone who needs insurance?</div><h2>Share Patrick's contact.</h2><p>Help a friend or family member start a conversation about home or auto insurance.</p></div><button class="btn primary" id="shareBtn" type="button">Share Patrick Wilson Insurance ↗</button></div>
+  </div>
+</section>
+</main>
+<footer>
+ <div class="wrap">
+  <div class="foot"><div><strong>PATRICK WILSON INSURANCE</strong><br>Call or text <a href="tel:+14793053739">479-305-3739</a></div><div><a href="#quote">Request a quote</a> · <a href="#service">Customer service</a> · <a href="#faq">FAQs</a></div></div>
+  <div class="disclaimer">Prototype website for contact and inquiry purposes only. Not an insurance quote, binder, policy, or guarantee of coverage. Do not send sensitive personal, financial, or policy information through this demo. Verify business licensing, carrier relationships, required disclosures, and privacy language before public launch.</div>
+ </div>
+</footer>
+<div class="mobilebar"><a class="btn darkbtn" href="tel:+14793053739">☎ Call</a><a class="btn primary" href="#quote">Get a quote</a></div>
+<script>
+const PHONE = "+14793053739";
+function openText(body) {
+  const url = "sms:" + PHONE + "?&body=" + encodeURIComponent(body);
+  window.location.href = url;
+}
+document.querySelectorAll("[data-product]").forEach(el => el.addEventListener("click", () => {
+  const select = document.getElementById("qtype");
+  if (el.dataset.product === "Home") select.value = "Home insurance";
+  if (el.dataset.product === "Auto") select.value = "Auto insurance";
+}));
+document.getElementById("quoteForm").addEventListener("submit", e => {
+  e.preventDefault();
+  if (!document.getElementById("qconsent").checked) return;
+  const name = document.getElementById("qname").value.trim();
+  const phone = document.getElementById("qphone").value.trim();
+  const type = document.getElementById("qtype").value;
+  const contact = document.getElementById("qcontact").value;
+  const time = document.getElementById("qtime").value;
+  const body = `Hello Patrick, I'd like to request information about ${type}. Name: ${name}. My phone: ${phone}. Preferred contact: ${contact}. Best time: ${time}. I consent to being contacted about this request.`;
+  document.getElementById("qstatus").textContent = "Your messaging app should open with a draft. Review the message and press Send to submit your request.";
+  document.getElementById("qstatus").classList.add("show");
+  openText(body);
+});
+document.getElementById("serviceForm").addEventListener("submit", e => {
+  e.preventDefault();
+  if (!document.getElementById("sconsent").checked) return;
+  const name = document.getElementById("sname").value.trim();
+  const phone = document.getElementById("sphone").value.trim();
+  const reason = document.getElementById("sreason").value;
+  const contact = document.getElementById("scontact").value;
+  const body = `Hello Patrick, I'm an existing customer requesting a callback. Name: ${name}. My phone: ${phone}. General reason: ${reason}. Preferred contact: ${contact}. I consent to being contacted about this request. I have not included policy details.`;
+  document.getElementById("sstatus").textContent = "Your messaging app should open with a draft. Review the message and press Send to submit your request.";
+  document.getElementById("sstatus").classList.add("show");
+  openText(body);
+});
+document.querySelectorAll(".faq button").forEach(btn => btn.addEventListener("click", () => {
+  const faq = btn.closest(".faq");
+  const open = faq.classList.toggle("open");
+  btn.setAttribute("aria-expanded", String(open));
+  btn.querySelector("span").textContent = open ? "−" : "+";
+}));
+document.getElementById("shareBtn").addEventListener("click", async () => {
+  const shareData = {title:"Patrick Wilson Insurance",text:"Contact Patrick Wilson Insurance for home and auto insurance information. Call or text 479-305-3739."};
+  if (navigator.share) {
+    try { await navigator.share(shareData); } catch (err) { if (err.name !== "AbortError") fallbackShare(); }
+  } else fallbackShare();
+});
+function fallbackShare(){
+  const text = "Patrick Wilson Insurance — Home and auto insurance information. Call or text 479-305-3739.";
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(()=>alert("Share text copied. Paste it into Facebook, Instagram, or a message."));
+  } else alert(text);
+}
+</script>
+</body>
+</html>
