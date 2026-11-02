@@ -41,6 +41,21 @@ footer{background:#0b1b2b;color:#d7e0e8;padding:28px 0;font-size:13px}.foot{disp
 .mobilebar{display:none}
 @media(max-width:760px){.navlinks{display:none}.hero-inner{grid-template-columns:1fr;padding-top:42px}.hero-card{transform:none}.cards{grid-template-columns:1fr}.split{grid-template-columns:1fr}.section{padding:42px 0}.referral{display:block}.referral .btn{margin-top:16px;width:100%}.mobilebar{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);padding:9px 12px;gap:9px;z-index:20;box-shadow:0 -5px 22px #10243a12}.mobilebar .btn{flex:1;padding:12px 8px;font-size:13px}footer{padding-bottom:86px}.two{grid-template-columns:1fr}}
 </style>
+
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Patrick Wilson">
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+  });
+}
+</script>
 </head>
 <body>
 <header>
